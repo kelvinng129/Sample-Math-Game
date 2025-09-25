@@ -1,0 +1,146 @@
+plugins {
+    id 'com.android.application'
+    // Removed Kotlin plugins
+    // id 'org.jetbrains.kotlin.android'
+    // id 'kotlin-android-extensions'
+    // id 'kotlin-kapt'
+}
+
+android {
+    namespace 'com.mobile.game'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.mobile.game"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    signingConfigs {
+        release {
+            keyAlias 'key0'
+            keyPassword '1234566'
+            storeFile file('../key.jks')
+            storePassword '1234566'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+        debug {
+            keyAlias 'key0'
+            keyPassword '1234566'
+            storeFile file('../key.jks')
+            storePassword '1234566'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            assets {
+                srcDirs 'src/main/assets'
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    viewBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    // implementation files('libs/CPCL_SDK_V1.22.01.jar')
+
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.6.0'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.6.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation 'com.tencent:mmkv:1.2.16'
+    implementation 'com.google.code.gson:gson:2.10.1'
+
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+    implementation 'io.reactivex.rxjava3:rxjava:3.0.0'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.6.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.0'
+
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.0'
+
+    // implementation "com.github.kongzue.DialogX:DialogX:0.0.46"
+    implementation "com.github.kongzue.DialogX:DialogX:0.0.49"
+
+    implementation "io.github.vincent-series:smart-toast:4.0.8"
+    // kapt "io.github.vincent-series:annotation-compiler:1.0.3"
+
+    implementation 'com.github.gzu-liyujiang:Android_CN_OAID:4.2.5.1'
+
+    // Removed Kotlin dependencies
+    // implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.8.22'
+    // implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.22'
+
+    implementation 'com.github.tbruyelle:rxpermissions:0.12'
+    implementation 'org.apache.httpcomponents:httpcore:4.4.4'
+    implementation 'com.github.loper7:DateTimePicker:0.6.3'
+
+    implementation 'com.tencent.bugly:crashreport:4.1.9.2'
+    // implementation 'top.zibin:Luban:1.1.8'
+
+    // implementation 'com.daimajia.numberprogressbar:library:1.4@aar'
+    implementation "com.github.skydoves:progressview:1.1.3"
+
+    implementation 'com.github.HuanTanSheng:EasyPhotos:3.1.5'
+
+    implementation 'top.zibin:Luban:1.1.8'
+    implementation 'com.github.baoyachi:StepView:1.9'
+
+    implementation 'com.don:clockviewlibrary:1.0.1'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.47'
+
+    // AndroidX version
+    // implementation 'com.github.jenly1314:zxing-lite:3.1.0'
+    // implementation 'com.github.jenly1314:zxing-lite:2.2.1'
+    implementation 'com.github.mtjsoft:CameraXBarcodeScanning:1.3.1'
+
+    implementation 'com.squareup.okhttp3:okhttp:4.9.2'
+}
+
+configurations.all {
+    resolutionStrategy {
+        force 'org.jetbrains.kotlin:kotlin-stdlib:1.8.20'
+        force 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.20'
+        force 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20'
+    }
+}

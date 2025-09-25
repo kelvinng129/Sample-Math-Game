@@ -1,0 +1,13 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+
+    <item
+        android:drawable="@drawable/boom1"
+        android:duration="1000" />
+    <item
+        android:drawable="@drawable/boom2"
+        android:duration="1000" />
+    <item
+        android:drawable="@drawable/boom3"
+        android:duration="1000" />
+</animation-list>

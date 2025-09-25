@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 圓角背景 -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="16dp" />
+            <solid android:color="#4FABAC" />
+        </shape>
+    </item>
+    <!-- 圖像 -->
+    <item>
+        <bitmap
+            android:src="@drawable/btn_play_icon"
+            android:gravity="center"
+            android:tileMode="disabled"
+            android:scaleType="centerInside" /> <!-- 或者使用 fitCenter -->
+    </item>
+</layer-list>

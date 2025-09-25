@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/background_photo"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:gravity="center_horizontal"
+        android:text="Weclome to the Mathematic Game"
+        android:textColor="@color/teal_200"
+        android:textSize="30dp" />
+
+
+
+    <ImageButton
+        android:id="@+id/play"
+        android:layout_width="280dp"
+        android:layout_height="91dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/btn_play_combined"
+        android:contentDescription="Play Button"
+        android:padding="10dp"
+        android:scaleType="centerInside" />
+
+    <ImageButton
+        android:id="@+id/ranking"
+        android:layout_width="223dp"
+        android:layout_height="95dp"
+        android:layout_marginBottom="32dp"
+        android:text="GAME RANKING"
+        app:srcCompat="@drawable/tesedd" />
+
+    <ImageButton
+        android:id="@+id/record"
+        android:layout_width="225dp"
+        android:layout_height="102dp"
+        android:layout_marginBottom="32dp"
+        android:text="YOUR RECORDS"
+        app:srcCompat="@drawable/yourrecord_photo" />
+
+    <ImageButton
+        android:id="@+id/exit"
+        android:layout_width="231dp"
+        android:layout_height="109dp"
+        android:text="CLOSE"
+        app:srcCompat="@drawable/closephoto" />
+
+</LinearLayout>

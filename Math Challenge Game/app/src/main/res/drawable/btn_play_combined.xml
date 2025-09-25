@@ -1,0 +1,8 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/rounded_button" />
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/btn_play_icon" />
+    </item>
+</layer-list>
