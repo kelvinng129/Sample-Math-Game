@@ -6,6 +6,6 @@ Record :
 
 ![Screenshot](https://github.com/kelvinng129/Sample-Math-Game/blob/e008ee4a38d1160a91154ff867fa9b7a44740dde/Record.png)
 
-Main :
+Main Page:
 
-[![Screenshot](https://github.com/kelvinng129/Sample-Math-Game/blob/e008ee4a38d1160a91154ff867fa9b7a44740dde/Main%20Page.png)
+![Screenshot](https://github.com/kelvinng129/Sample-Math-Game/blob/e008ee4a38d1160a91154ff867fa9b7a44740dde/Main%20Page.png)
